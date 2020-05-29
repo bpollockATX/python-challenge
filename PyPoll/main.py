@@ -12,7 +12,6 @@ election_data = os.path.join("../PyPoll", "election_data.csv")
 
 with open(election_data) as csvfile:
     csvreader = csv.reader(csvfile, delimiter = ",")
-    #csvwriter = csv.writer(csvfile, delimiter = ",")
     csv_header = next(csvreader)
     
     
@@ -50,8 +49,6 @@ with open(election_data) as csvfile:
     print("-------------------------")
 
 #output to csv
-candidateResults = zip(i, percentWon, VotesCast)
-
 output_file = os.path.join("output.csv") 
 
 with open(output_file, "w") as datafile:
